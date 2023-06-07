@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F704B3A24BD213D00421AD6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F73D079244F48320083A536 /* main.c */; };
+		2F704B3B24BD214C00421AD6 /* blockdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F57B04E24BA4B3900AF551B /* blockdb.c */; };
+		2F704B3C24BD214F00421AD6 /* indexdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F57B04824BA362F00AF551B /* indexdb.c */; };
+		2F704B3D24BD215400421AD6 /* encryption.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F6514BA24B522FC004BB461 /* encryption.c */; };
+		2F704B3E24BD215700421AD6 /* passwordinput.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FA782A624BC8C310052C555 /* passwordinput.c */; };
+		2F704B3F24BD215C00421AD6 /* filesystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FF38FE024B612A700335C69 /* filesystem.c */; };
+		2F704B4024BD215F00421AD6 /* secfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9A2A424BB065E00F7D23A /* secfs.c */; };
+		2F704B4124BD216300421AD6 /* utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F6514BD24B536A2004BB461 /* utilities.c */; };
+		2F704B4224BD219400421AD6 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4F590624B3CC7B0053FF9D /* libcrypto.a */; };
+		2F704B4324BD219400421AD6 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4F590724B3CC7B0053FF9D /* libssl.a */; };
+		2F704B4424BD224100421AD6 /* libosxfuse.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5380E424B6230900E51ACD /* libosxfuse.dylib */; };
+		2F704B4524BD224100421AD6 /* libosxfuse.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 2F5380E424B6230900E51ACD /* libosxfuse.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F704B3324BD211A00421AD6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		2F704B4624BD224100421AD6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F704B4524BD224100421AD6 /* libosxfuse.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F4F590024B3C63B0053FF9D /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = vendor/openssl/linux_x64/libssl.a; sourceTree = "<group>"; };
+		2F4F590224B3C6440053FF9D /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = vendor/openssl/linux_x64/libcrypto.a; sourceTree = "<group>"; };
+		2F4F590424B3C6CB0053FF9D /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		2F4F590624B3CC7B0053FF9D /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = vendor/openssl/macOS/libcrypto.a; sourceTree = "<group>"; };
+		2F4F590724B3CC7B0053FF9D /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = vendor/openssl/macOS/libssl.a; sourceTree = "<group>"; };
+		2F4F590A24B3E04F0053FF9D /* libosxfuse.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse.dylib; path = vendor/fuse/macos/libosxfuse.dylib; sourceTree = "<group>"; };
+		2F4F590E24B3E1EA0053FF9D /* libosxfuse.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libosxfuse.la; path = vendor/fuse/macos/libosxfuse.la; sourceTree = "<group>"; };
+		2F5380CB24B61EE100E51ACD /* libosxfuse.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse.2.dylib; path = vendor/fuse/macos/libosxfuse.2.dylib; sourceTree = "<group>"; };
+		2F5380CF24B6208200E51ACD /* libosxfuse_i64.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libosxfuse_i64.la; path = vendor/fuse/macos/libosxfuse_i64.la; sourceTree = "<group>"; };
+		2F5380D024B6208C00E51ACD /* libosxfuse_i64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse_i64.dylib; path = vendor/fuse/macos/libosxfuse_i64.dylib; sourceTree = "<group>"; };
+		2F5380DF24B6230900E51ACD /* libosxfuse.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse.2.dylib; path = vendor/fuse/macOS/libosxfuse.2.dylib; sourceTree = "<group>"; };
+		2F5380E024B6230900E51ACD /* libosxfuse.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libosxfuse.la; path = vendor/fuse/macOS/libosxfuse.la; sourceTree = "<group>"; };
+		2F5380E124B6230900E51ACD /* libosxfuse_i64.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse_i64.2.dylib; path = vendor/fuse/macOS/libosxfuse_i64.2.dylib; sourceTree = "<group>"; };
+		2F5380E224B6230900E51ACD /* libosxfuse_i64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse_i64.dylib; path = vendor/fuse/macOS/libosxfuse_i64.dylib; sourceTree = "<group>"; };
+		2F5380E324B6230900E51ACD /* libosxfuse_i64.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libosxfuse_i64.la; path = vendor/fuse/macOS/libosxfuse_i64.la; sourceTree = "<group>"; };
+		2F5380E424B6230900E51ACD /* libosxfuse.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libosxfuse.dylib; path = vendor/fuse/macOS/libosxfuse.dylib; sourceTree = "<group>"; };
+		2F5380EE24B6242300E51ACD /* secfs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = secfs.entitlements; sourceTree = "<group>"; };
+		2F57B04724B9167700AF551B /* indexdb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = indexdb.h; sourceTree = "<group>"; };
+		2F57B04824BA362F00AF551B /* indexdb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = indexdb.c; sourceTree = "<group>"; };
+		2F57B04D24BA4B3900AF551B /* blockdb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blockdb.h; sourceTree = "<group>"; };
+		2F57B04E24BA4B3900AF551B /* blockdb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = blockdb.c; sourceTree = "<group>"; };
+		2F625323249688CE009637E1 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = openssl; path = vendor/openssl/apps/openssl; sourceTree = "<group>"; };
+		2F625324249688F1009637E1 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = vendor/openssl/libssl.a; sourceTree = "<group>"; };
+		2F6514B924B522FC004BB461 /* encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = encryption.h; sourceTree = "<group>"; };
+		2F6514BA24B522FC004BB461 /* encryption.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = encryption.c; sourceTree = "<group>"; };
+		2F6514BC24B523F1004BB461 /* utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+		2F6514BD24B536A2004BB461 /* utilities.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utilities.c; sourceTree = "<group>"; };
+		2F704B3524BD211A00421AD6 /* Secfs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Secfs; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F73D079244F48320083A536 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		2F7EB09424BE66AB00A29ECB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2F9D0E4324BBE096009E135E /* libuuid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuuid.a; path = vendor/uuid/macOS/libuuid.a; sourceTree = "<group>"; };
+		2FA782A524BC8C310052C555 /* passwordinput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = passwordinput.h; sourceTree = "<group>"; };
+		2FA782A624BC8C310052C555 /* passwordinput.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = passwordinput.c; sourceTree = "<group>"; };
+		2FD9A2A324BB065E00F7D23A /* secfs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secfs.h; sourceTree = "<group>"; };
+		2FD9A2A424BB065E00F7D23A /* secfs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = secfs.c; sourceTree = "<group>"; };
+		2FF38FDF24B612A700335C69 /* filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
+		2FF38FE024B612A700335C69 /* filesystem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = filesystem.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F704B3224BD211A00421AD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F704B4324BD219400421AD6 /* libssl.a in Frameworks */,
+				2F704B4224BD219400421AD6 /* libcrypto.a in Frameworks */,
+				2F704B4424BD224100421AD6 /* libosxfuse.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F625322249688CE009637E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F9D0E4324BBE096009E135E /* libuuid.a */,
+				2F5380D024B6208C00E51ACD /* libosxfuse_i64.dylib */,
+				2F5380CF24B6208200E51ACD /* libosxfuse_i64.la */,
+				2F5380E124B6230900E51ACD /* libosxfuse_i64.2.dylib */,
+				2F5380E224B6230900E51ACD /* libosxfuse_i64.dylib */,
+				2F5380E324B6230900E51ACD /* libosxfuse_i64.la */,
+				2F5380CB24B61EE100E51ACD /* libosxfuse.2.dylib */,
+				2F5380E424B6230900E51ACD /* libosxfuse.dylib */,
+				2F4F590E24B3E1EA0053FF9D /* libosxfuse.la */,
+				2F4F590A24B3E04F0053FF9D /* libosxfuse.dylib */,
+				2F5380DF24B6230900E51ACD /* libosxfuse.2.dylib */,
+				2F5380E024B6230900E51ACD /* libosxfuse.la */,
+				2F4F590224B3C6440053FF9D /* libcrypto.a */,
+				2F625324249688F1009637E1 /* libssl.a */,
+				2F4F590024B3C63B0053FF9D /* libssl.a */,
+				2F4F590624B3CC7B0053FF9D /* libcrypto.a */,
+				2F4F590724B3CC7B0053FF9D /* libssl.a */,
+				2F625323249688CE009637E1 /* openssl */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F704B3624BD211A00421AD6 /* Secfs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Secfs;
+			sourceTree = "<group>";
+		};
+		2F73D06D244F48320083A536 = {
+			isa = PBXGroup;
+			children = (
+				2F7EB09424BE66AB00A29ECB /* README.md */,
+				2F5380EE24B6242300E51ACD /* secfs.entitlements */,
+				2F4F590424B3C6CB0053FF9D /* Makefile */,
+				2F73D078244F48320083A536 /* src */,
+				2F704B3624BD211A00421AD6 /* Secfs */,
+				2F73D077244F48320083A536 /* Products */,
+				2F625322249688CE009637E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2F73D077244F48320083A536 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F704B3524BD211A00421AD6 /* Secfs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F73D078244F48320083A536 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2F83DC2B24BD070C00D6AF0F /* utilities */,
+				2F83DC2A24BD06FA00D6AF0F /* filesystem */,
+				2F83DC2924BD06D400D6AF0F /* security */,
+				2F83DC2824BD06C600D6AF0F /* db */,
+				2F73D079244F48320083A536 /* main.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2F83DC2824BD06C600D6AF0F /* db */ = {
+			isa = PBXGroup;
+			children = (
+				2F57B04724B9167700AF551B /* indexdb.h */,
+				2F57B04824BA362F00AF551B /* indexdb.c */,
+				2F57B04D24BA4B3900AF551B /* blockdb.h */,
+				2F57B04E24BA4B3900AF551B /* blockdb.c */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		2F83DC2924BD06D400D6AF0F /* security */ = {
+			isa = PBXGroup;
+			children = (
+				2F6514B924B522FC004BB461 /* encryption.h */,
+				2F6514BA24B522FC004BB461 /* encryption.c */,
+				2FA782A524BC8C310052C555 /* passwordinput.h */,
+				2FA782A624BC8C310052C555 /* passwordinput.c */,
+			);
+			path = security;
+			sourceTree = "<group>";
+		};
+		2F83DC2A24BD06FA00D6AF0F /* filesystem */ = {
+			isa = PBXGroup;
+			children = (
+				2FD9A2A324BB065E00F7D23A /* secfs.h */,
+				2FD9A2A424BB065E00F7D23A /* secfs.c */,
+				2FF38FDF24B612A700335C69 /* filesystem.h */,
+				2FF38FE024B612A700335C69 /* filesystem.c */,
+			);
+			path = filesystem;
+			sourceTree = "<group>";
+		};
+		2F83DC2B24BD070C00D6AF0F /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2F6514BC24B523F1004BB461 /* utilities.h */,
+				2F6514BD24B536A2004BB461 /* utilities.c */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F704B3424BD211A00421AD6 /* Secfs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F704B3924BD211A00421AD6 /* Build configuration list for PBXNativeTarget "Secfs" */;
+			buildPhases = (
+				2F704B4624BD224100421AD6 /* Embed Libraries */,
+				2F704B3124BD211A00421AD6 /* Sources */,
+				2F704B3224BD211A00421AD6 /* Frameworks */,
+				2F704B3324BD211A00421AD6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Secfs;
+			productName = Secfs;
+			productReference = 2F704B3524BD211A00421AD6 /* Secfs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F73D06E244F48320083A536 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "Stas Seldin";
+				TargetAttributes = {
+					2F704B3424BD211A00421AD6 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 2F73D071244F48320083A536 /* Build configuration list for PBXProject "secfs" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F73D06D244F48320083A536;
+			productRefGroup = 2F73D077244F48320083A536 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F704B3424BD211A00421AD6 /* Secfs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F704B3124BD211A00421AD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F704B4124BD216300421AD6 /* utilities.c in Sources */,
+				2F704B3E24BD215700421AD6 /* passwordinput.c in Sources */,
+				2F704B3D24BD215400421AD6 /* encryption.c in Sources */,
+				2F704B3A24BD213D00421AD6 /* main.c in Sources */,
+				2F704B4024BD215F00421AD6 /* secfs.c in Sources */,
+				2F704B3B24BD214C00421AD6 /* blockdb.c in Sources */,
+				2F704B3F24BD215C00421AD6 /* filesystem.c in Sources */,
+				2F704B3C24BD214F00421AD6 /* indexdb.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2F704B3724BD211A00421AD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vendor/openssl/include",
+					"$(PROJECT_DIR)/vendor/fuse/include",
+					"$(PROJECT_DIR)/vendor/uuid/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor/openssl/macOS",
+					"$(PROJECT_DIR)/vendor/fuse/macOS",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F704B3824BD211A00421AD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vendor/openssl/include",
+					"$(PROJECT_DIR)/vendor/fuse/include",
+					"$(PROJECT_DIR)/vendor/uuid/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor/openssl/macOS",
+					"$(PROJECT_DIR)/vendor/fuse/macOS",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2F73D07B244F48320083A536 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_FLOAT_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2F73D07C244F48320083A536 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_FLOAT_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F704B3924BD211A00421AD6 /* Build configuration list for PBXNativeTarget "Secfs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F704B3724BD211A00421AD6 /* Debug */,
+				2F704B3824BD211A00421AD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F73D071244F48320083A536 /* Build configuration list for PBXProject "secfs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F73D07B244F48320083A536 /* Debug */,
+				2F73D07C244F48320083A536 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F73D06E244F48320083A536 /* Project object */;
+}
